@@ -1,1 +1,10 @@
-# calculatrice_vb.net-winForms
+# Calculatrice 
+
+## Langage utilisé
+
+- VB.NET
+
+## Outil utilisé 
+
+- Windows Forms
+- Visual Studio
