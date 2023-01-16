@@ -44,9 +44,10 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button0 = New System.Windows.Forms.Button()
         Me.MultiButton = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.rightNum = New System.Windows.Forms.Label()
         Me.leftNum = New System.Windows.Forms.Label()
+        Me.equal = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.sign = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -272,34 +273,14 @@ Partial Class Form1
         Me.MultiButton.Text = "x"
         Me.MultiButton.UseVisualStyleBackColor = True
         '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.AutoSize = True
-        Me.TableLayoutPanel1.ColumnCount = 4
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.22222!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.22222!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.22222!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel1.Controls.Add(Me.rightNum, 2, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.leftNum, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.sign, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(74, 59)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.TableLayoutPanel1.RowCount = 1
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(195, 33)
-        Me.TableLayoutPanel1.TabIndex = 3
-        '
         'rightNum
         '
         Me.rightNum.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.rightNum.Location = New System.Drawing.Point(74, 0)
+        Me.rightNum.Location = New System.Drawing.Point(44, 0)
         Me.rightNum.Margin = New System.Windows.Forms.Padding(0)
         Me.rightNum.Name = "rightNum"
-        Me.rightNum.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.rightNum.Size = New System.Drawing.Size(38, 33)
-        Me.rightNum.TabIndex = 6
+        Me.rightNum.Size = New System.Drawing.Size(43, 33)
+        Me.rightNum.TabIndex = 5
         Me.rightNum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'leftNum
@@ -309,19 +290,51 @@ Partial Class Form1
         Me.leftNum.Location = New System.Drawing.Point(3, 0)
         Me.leftNum.Name = "leftNum"
         Me.leftNum.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.leftNum.Size = New System.Drawing.Size(59, 33)
+        Me.leftNum.Size = New System.Drawing.Size(1, 33)
         Me.leftNum.TabIndex = 4
         Me.leftNum.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'equal
+        '
+        Me.equal.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.equal.Location = New System.Drawing.Point(87, 0)
+        Me.equal.Margin = New System.Windows.Forms.Padding(0)
+        Me.equal.Name = "equal"
+        Me.equal.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.equal.Size = New System.Drawing.Size(111, 33)
+        Me.equal.TabIndex = 6
+        Me.equal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.AutoSize = True
+        Me.TableLayoutPanel1.ColumnCount = 4
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel1.Controls.Add(Me.rightNum, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.sign, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.equal, 2, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.leftNum, 0, 0)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(74, 59)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TableLayoutPanel1.RowCount = 1
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(198, 33)
+        Me.TableLayoutPanel1.TabIndex = 3
         '
         'sign
         '
         Me.sign.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.sign.Location = New System.Drawing.Point(37, 0)
+        Me.sign.Location = New System.Drawing.Point(6, 0)
         Me.sign.Margin = New System.Windows.Forms.Padding(0)
         Me.sign.Name = "sign"
+        Me.sign.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.sign.Size = New System.Drawing.Size(38, 33)
-        Me.sign.TabIndex = 5
-        Me.sign.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.sign.TabIndex = 7
+        Me.sign.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Form1
         '
@@ -382,8 +395,9 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Button0 As Button
     Friend WithEvents MultiButton As Button
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents leftNum As Label
-    Friend WithEvents sign As Label
     Friend WithEvents rightNum As Label
+    Friend WithEvents leftNum As Label
+    Friend WithEvents equal As Label
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents sign As Label
 End Class
